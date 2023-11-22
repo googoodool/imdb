@@ -13,11 +13,6 @@ export default async function Home({ searchParams }) {
   const genre = searchParams.genre || "fetchTrending";
 
   const res = await fetch(
-    // `https://api.themoviedb.org/3/trending/${
-    //   genre === "fetchTopRated" ? "tv" : "movie"
-    // }/week?language=en-US`,
-    // options
-
     `${
       genre === "fetchTopRated"
         ? "https://api.themoviedb.org/3/tv/popular?language=en-US&page=1"
