@@ -15,7 +15,7 @@ export default async function Home({ searchParams }) {
   const res = await fetch(
     `${
       genre === "fetchTopRated"
-        ? "https://api.themoviedb.org/3/tv/popular?language=en-US&page=1"
+        ? "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
         : "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1"
     } `,
     options,
