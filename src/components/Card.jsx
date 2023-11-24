@@ -12,20 +12,20 @@ function Card({ result }) {
           }`}
           width={500}
           height={300}
-          className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200"
+          className="sm:rounded-t-lg group-hover:opacity-80 transition-opacity duration-200 justify-center items-center sm:items-center "
           placeholder="blur"
           blurDataURL="/spinner.svg"
           alt="image not available"
           style={{ maxWidth: "100%", height: "auto" }}
         ></Image>
         <div className="p-2">
-          <p className="line-clamp-2 text-md">{result.overview}</p>
+          <p className="line-clamp-2 ">{result.overview}</p>
           <h2 className="truncate text-lg font-bold">
             {result.title || result.name}
           </h2>
-          <p className="flex items-center">
+          <p className="flex items-center text-sm">
             {result.first_air_date || result.release_date}
-            <LuThumbsUp className="h-5 mr-1 ml-3" /> {result.vote_count}
+            <LuThumbsUp className="h-5 mr-1 ml-3" /> {result.popularity}
           </p>
         </div>
       </Link>

@@ -16,7 +16,7 @@ export default async function Home({ searchParams }) {
     `${
       genre === "fetchTopRated"
         ? "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
-        : "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1"
+        : "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1"
     } `,
     options,
     { next: { revalidate: 10 } }
